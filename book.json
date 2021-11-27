@@ -4,6 +4,6 @@
   "description": "yes",
   "language": "zh-hans",
   "styles": {
-    "website": "./_pages/gitbook-configure.css"
+    "website": "./_page/gitbook-configure.css"
   },
 }
