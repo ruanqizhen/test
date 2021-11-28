@@ -43,11 +43,9 @@
 		
 		function(hook, vm) {
 		  hook.doneEach(function() {
-		  console.log(vm);
 			const path = vm.route.path === '/' ? '/README' : vm.route.path;
 		  	const path_split = path.split('/');
 			const last_item = path_split[path_split.length - 1];
-			
 		    var dsq = document.createElement('script');
 			  dsq.type = 'text/javascript';
 			  dsq.async = true;
