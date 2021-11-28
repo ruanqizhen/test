@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: '<b>LabVIEW 编程经验</b>',
+	  nameLink: '/#/README',
+	  loadSidebar: true,
+      repo: 'https://github.com/ruanqizhen/labview_book',
+	  subMaxLevel: 4,
+      auto2top: true,
+      search: 'auto',
+      search: {
+        paths: 'auto',
+        placeholder: '搜索',
+        noData: '找不到结果',
+        depth: 6,
+        hideOtherSidebarContent: false,
+      },
+	  ga: 'G-9EFRGQK2N0',
+	  pagination: {
+		previousText: '上一章节',
+		nextText: '下一章节',
+		crossChapter: true,
+		crossChapterText: true,
+	  },
+	  progress: {
+        position: "top",
+        color: "var(--theme-color,#42b983)",
+        height: "3px",
+      },
+	  plugins: [
+        EditOnGithubPlugin.create('https://github.com/ruanqizhen/labview_book/blob/main/', null, '编辑'),
+		
+		function(hook, vm) {
+		  hook.doneEach(function() {
+		  console.log(vm);
+			const path = vm.route.path === '/' ? '/README' : vm.route.path;
+		  	const path_split = path.split('/');
+			const last_item = path_split[path_split.length - 1];
+			
+		    var dsq = document.createElement('script');
+			  dsq.type = 'text/javascript';
+			  dsq.async = true;
+			  dsq.setAttribute('src', 'https://giscus.app/client.js');
+			  dsq.setAttribute('data-repo', 'ruanqizhen/labview_book');
+			  dsq.setAttribute('data-repo-id', 'R_kgDOGYjRCQ');
+			  dsq.setAttribute('data-category', 'Announcements');
+			  dsq.setAttribute('data-category-id', 'DIC_kwDOGYjRCc4B_4dq');
+			  dsq.setAttribute('data-mapping', 'specific');
+			  dsq.setAttribute('data-term', last_item);
+			  dsq.setAttribute('data-reactions-enabled', '1');
+			  dsq.setAttribute('data-emit-metadata', '0');
+			  dsq.setAttribute('data-theme', 'light');
+			  dsq.setAttribute('data-lang', 'zh-CN');
+			  dsq.setAttribute('crossorigin', 'anonymous');
+			  document.getElementById('main').appendChild(dsq);
+		  });
+		}
+
+      ],
+
+	  
+    }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/ga.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
+
+</script>
+
+</body>
+</html>
