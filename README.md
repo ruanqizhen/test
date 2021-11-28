@@ -9,3 +9,4 @@
 本书有两个阅读页面：<https://lv.qizhen.xyz/>使用GitHub Pages创建；<https://labview.qizhen.xyz/>使用GitBook创建。两个页面都与GitHub自动同步，内容完全相同，只有样式风格不同。GitBook的搜索更强大，但缺少留言功能，需要评论可以直接在[GitHub的讨论区](https://github.com/ruanqizhen/labview_book/discussions)留言。本书所有的文字都保存在[docs文件夹](https://github.com/ruanqizhen/labview_book/tree/main/docs)下。相关的示例代码保存在[code文件夹](https://github.com/ruanqizhen/labview_book/tree/main/code)下，书中提到的示例基本都可以在此文件夹下找到，只有个别示例因为过于简单或版权问题没有提供出来。
 
 笔者并没有发行版书籍的电子文档，开源的是本书的原稿。原稿与发行版内容基本相同，主要是少了漂亮的排版，但增加了一些补充内容。本书在排版增印的过程中修改了原稿一些错漏之处，开源的原稿不包含这些修改，可能会比印刷版多一些小差错，希望可以在将来不断修正。文档在转换成开源格式过程中（从Word格式到Markdown格式）也出现了一些新的排版问题，尤其是表格和图片，还需要继续花时间修正。
+
