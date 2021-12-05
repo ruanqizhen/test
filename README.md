@@ -3,8 +3,6 @@
 [test page](docs/test)
 
 
-{{NoteTA|
-G1=Math
-|1=zh-cn:程序; zh-tw:程式;
-|2=zh-tw:費波那契;zh-hk:費波那契;zh-cn:斐波那契;
-}}
+*<math>F_0=0</math>
+*<math>F_1=1</math>
+*<math>F_n = F_{n-1}+ F_{n-2}</math>（n≧2）
