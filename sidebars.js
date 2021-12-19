@@ -20,8 +20,8 @@ const sidebars = {
   tutorialSidebar: [
     {
       type: 'category',
-      label: 'Tutorial',
-	  items: ['greeting', 'intro'],
+      label: '前言',
+	  items: ['README', 'preface_guowenzhe', 'preface', 'preface_labview'],
     },
   ],
 

@@ -22,9 +22,11 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+		  sidebarCollapsed: false,
           // Please change this to your repo.
           editUrl: 'https://github.com/ruanqizhen/labview_book/edit/main/',
-		  routeBasePath: '/'
+		  routeBasePath: '/',
+		  path: './docs',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -36,6 +38,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+	  hideableSidebar: true,
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
       navbar: {
         title: 'LabVIEW 编程经验',
         logo: {
@@ -56,19 +64,17 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
-	
-  i18n: {
-    defaultLocale: "zh-CN",
-    locales: ["zh-CN"],
-    // locales: ["zh-CN", "en"],
-    localeConfigs: {
-      "zh-CN": {
-        label: "中文",
-      },
-      en: {
-        label: "English",
-      },
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css',
+      integrity:
+        'sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc',
+      crossorigin: 'anonymous',
     },
+  ],
+  i18n: {
+    defaultLocale: 'zh-CN',
+    locales: ['zh-CN'],
   },
 };
 
