@@ -47,8 +47,8 @@ const config = {
       navbar: {
         title: 'LabVIEW 编程经验',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'LabVIEW',
+          src: 'img/logo.png',
 		  href: '/'
         },
         items: [
