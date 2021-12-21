@@ -66,10 +66,14 @@ const config = {
     }),
   stylesheets: [
     {
-      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css',
-      integrity:
-        'sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc',
-      crossorigin: 'anonymous',
+      rel: "preconnect",
+      href: "https://fonts.gstatic.com",
+      type: "text/css",
+    },
+    {
+      href: "https://fonts.font.im/css?family=Raleway:500,700&display=swap",
+      type: "text/css",
+      rel: "stylesheet",
     },
   ],
   i18n: {
