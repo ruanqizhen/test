@@ -7,8 +7,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'LabVIEW 编程经验',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://ruanqizhen.github.io/test/',
+  tagline: 'LabVIEW, 编程, 经验, 教程, 开源, 免费, 电子书, 下载, PDF, 示例',
+  url: 'https://lv.qizhen.xyz',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -45,6 +45,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
+		hideOnScroll: true,
         title: 'LabVIEW 编程经验',
         logo: {
           alt: 'LabVIEW',
@@ -65,16 +66,6 @@ const config = {
       },
     }),
   stylesheets: [
-    {
-      rel: "preconnect",
-      href: "https://fonts.gstatic.com",
-      type: "text/css",
-    },
-    {
-      href: "https://fonts.font.im/css?family=Raleway:500,700&display=swap",
-      type: "text/css",
-      rel: "stylesheet",
-    },
   ],
   i18n: {
     defaultLocale: 'zh-CN',
