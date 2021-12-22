@@ -90,6 +90,122 @@ const sidebars = {
 			'pattern_pass_by_ref',
 		  ],
         },
+		{
+          type: 'category',
+		  label: '调用外部程序',
+          link: {
+            type: 'doc',
+            id: 'external_call',
+          },
+          items: [ 
+		    'external_call_dll', 
+			'external_call_activex', 
+			'external_call_dotnet', 
+		  ],
+        },
+		{
+          type: 'category',
+		  label: 'VI 服务器',
+          link: {
+            type: 'doc',
+            id: 'vi_server',
+          },
+          items: [ 
+		    'vi_server_for_ui', 
+			'vi_server_for_subvi', 
+			'vi_server_for_vi', 
+			'vi_server_for_net',
+		  ],
+        },
+		{
+          type: 'category',
+		  label: '测试测量应用程序设计',
+          link: {
+            type: 'doc',
+            id: 'measurement',
+          },
+          items: [ 
+		    'measurement_r_p_d', 
+			'measurement_express_vi', 
+			'measurement_daq', 
+			'measurement_display',
+			'measurement_storage',
+		  ],
+        },
+		{
+          type: 'category',
+		  label: '调试',
+          link: {
+            type: 'doc',
+            id: 'debug',
+          },
+          items: [ 
+		    'debug_ide', 
+			'debug_probe', 
+			'debug_more_tools', 
+			'debug_errors',
+			'debug_performance',
+			'debug_dll',
+		  ],
+        },
+		{
+          type: 'category',
+		  label: '管理 LabVIEW 项目',
+          link: {
+            type: 'doc',
+            id: 'manage',
+          },
+          items: [ 
+		    'manage_project', 
+			'manage_library', 
+			'manage_release', 
+		  ],
+        },
+		{
+          type: 'category',
+		  label: '界面设计',
+          link: {
+            type: 'doc',
+            id: 'ui',
+          },
+          items: [ 
+		    'ui_principle', 
+			'ui_standard', 
+			'ui_cases', 
+			'ui_modulization',
+			'ui_xcontrol',
+		  ],
+        },
+		{
+          type: 'category',
+		  label: '代码风格与优化',
+          link: {
+            type: 'doc',
+            id: 'optimization',
+          },
+          items: [ 
+		    'optimization_mechanism', 
+			'optimization_memory', 
+			'optimization_multi_thread', 
+			'optimization_coding_style',
+			'optimization_inline_subvi',
+		  ],
+        },
+		{
+          type: 'category',
+		  label: '面向对象编程',
+          link: {
+            type: 'doc',
+            id: 'oop',
+          },
+          items: [ 
+		    'oop_basic', 
+			'oop_class', 
+			'oop_class_pro_con', 
+			'oop_interface',
+			'oop_use_cases',
+		  ],
+        },
 	  ],
     },
   ],
