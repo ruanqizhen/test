@@ -89,7 +89,6 @@ export default function DocItem(props) {
               <DocItemFooter {...props} />
             </article>
 
-            <DocPaginator previous={metadata.previous} next={metadata.next} />
 			<Giscus
 			  repo='ruanqizhen/labview_book'
 			  repoId='R_kgDOGYjRCQ'
@@ -101,7 +100,8 @@ export default function DocItem(props) {
 			  theme='light'
 			  lang='zh-CN'
 			/>
-			
+
+            <DocPaginator previous={metadata.previous} next={metadata.next} />
           </div>
         </div>
         {renderTocDesktop && (
