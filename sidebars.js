@@ -23,6 +23,27 @@ const sidebars = {
       label: '前言',
 	  items: ['README', 'preface_guowenzhe', 'preface', 'preface_labview'],
     },
+	{
+      type: 'category',
+      label: '正文',
+	  items: [
+	    {
+          type: 'category',
+		  label: 'LabVIEW 入门',
+          link: {
+            type: 'doc',
+            id: 'ramp_up',
+          },
+          items: [ 
+		    'ramp_up_install', 
+			'ramp_up_hello_world', 
+			'ramp_up_how_to_learn', 
+			'ramp_up_complex_vis',
+			'ramp_up_dev_environment'
+		  ],
+        },
+	  ],
+    },
   ],
 
 };
