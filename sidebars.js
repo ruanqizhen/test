@@ -208,6 +208,11 @@ const sidebars = {
         },
 	  ],
     },
+	{
+      type: 'category',
+      label: '附录',
+	  items: ['reference', 'epilogue'],
+    },
   ],
 
 };
