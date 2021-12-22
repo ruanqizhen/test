@@ -35,9 +35,9 @@ const config = {
     ],
   ],
 
-  themeConfig:
+  themeConfig: (
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
 	  hideableSidebar: true,
       colorMode: {
         defaultMode: 'light',
@@ -64,13 +64,22 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-    }),
-  stylesheets: [
-  ],
+    }
+  ),
+
   i18n: {
     defaultLocale: 'zh-CN',
     locales: ['zh-CN'],
   },
+  plugins: [
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        changefreq: 'weekly',
+        priority: 0.5,
+      },
+    ],
+  ],
 };
 
 module.exports = config;
