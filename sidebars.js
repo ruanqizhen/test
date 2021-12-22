@@ -39,7 +39,55 @@ const sidebars = {
 			'ramp_up_hello_world', 
 			'ramp_up_how_to_learn', 
 			'ramp_up_complex_vis',
-			'ramp_up_dev_environment'
+			'ramp_up_dev_environment',
+		  ],
+        },
+        {
+          type: 'category',
+		  label: '数据',
+          link: {
+            type: 'doc',
+            id: 'data',
+          },
+          items: [ 
+		    'data_number', 
+			'data_other_datatypes', 
+			'data_datatype_cast', 
+			'data_and_controls',
+			'data_use_cases',
+		  ],
+        },
+        {
+          type: 'category',
+		  label: '基本程序结构',
+          link: {
+            type: 'doc',
+            id: 'structure',
+          },
+          items: [ 
+		    'structure_sequence', 
+			'structure_condition', 
+			'structure_disable', 
+			'structure_loop',
+			'structure_event',
+			'structure_timing',
+		  ],
+        },
+		{
+          type: 'category',
+		  label: '常用程序结构模式',
+          link: {
+            type: 'doc',
+            id: 'pattern',
+          },
+          items: [ 
+		    'pattern_error_handling', 
+			'pattern_reentrant_vi', 
+			'pattern_state_machine', 
+			'pattern_global_data',
+			'pattern_ui',
+			'pattern_polymorphic_vi',
+			'pattern_pass_by_ref',
 		  ],
         },
 	  ],
