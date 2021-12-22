@@ -67,19 +67,7 @@ const config = {
     }
   ),
 
-  i18n: {
-    defaultLocale: 'zh-CN',
-    locales: ['zh-CN'],
-  },
-  plugins: [
-    [
-      '@docusaurus/plugin-sitemap',
-      {
-        changefreq: 'weekly',
-        priority: 0.5,
-      },
-    ],
-  ],
+
 };
 
 module.exports = config;
