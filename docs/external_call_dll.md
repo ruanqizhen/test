@@ -308,7 +308,7 @@ typedef struct {
 C语言中，字节对齐数可以由"#pragma
 pack"指令指定，也可以在项目属性里指定。但是LabVIEW的簇，只能是1字节对齐的。因此，C语言中，非1字节对齐的结构与Cluster对应时，必须做适当调整，才可使数据正确传输。
 
-比如，结构typedef struct { char a; int b}
+比如，结构`typedef struct { char a; int b}`
 MyStct; 是2字节对齐的，那么，对应的LabVIEW
 Cluster第一个元素还应该是I8型的a。但是，不能紧接着就放b。因为C语言中，b的起始地址不是紧挨着a的，它们中间还有一个无意义的一字节数据。虽然在C的结构体中没有表现出来，在LabVIEW中却需要把它考虑进去。也就是说，在LabVIEW与之对应的簇的元素a、b之间还应添加一个一字节长的元素。
 
@@ -317,7 +317,7 @@ Cluster第一个元素还应该是I8型的a。但是，不能紧接着就放b。
 C语言的结构中如果还嵌套了数组，是不能直接对应于LabVIEW中嵌套了数组的簇的。在LabVIEW中，只能把数组的元素都拆开来放在簇中。
 
 表 5.5列举了C与LabVIEW中一些常见结构数据类型数据的对应关系。
-
+```
 <table>
 <colgroup>
 <col style="width: 67%" />
@@ -362,7 +362,7 @@ MyStct* testStruct;</td>
 </tr>
 </tbody>
 </table>
-
+```
 表 .5不同结构类型与簇的对应关系
 
 表
@@ -372,7 +372,7 @@ MyStct* testStruct;</td>
 5.5中，所有的C语言中声明的testStruct变量，都是指向结构的指针。也就是说C函数的变量类型为结构的指针时，才能在LabVIEW中使用簇与之对应。CLN节点的配置面板中，并没有一个专门的参数类型叫做"struct"或者"簇"，只要选择"匹配至数据类型"就可以了。
 
 如果参数仅用于输入，它的类型很可能直接使用结构，而非结构的指针。考虑到C函数参数的压栈顺序，把一个结构体作为参数传给函数，等价于把结构中每个元素分别作为参数传递给函数。结构参数类型，在LabVIEW中的设置方法如下表所示：
-
+```
 <table>
 <colgroup>
 <col style="width: 11%" />
@@ -408,7 +408,7 @@ long TestStructure(Position *pos);</td>
 </tr>
 </tbody>
 </table>
-
+```
 表 .6结构型数据的设置
 
 ## 返回值的设置
