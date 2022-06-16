@@ -1,44 +1,33 @@
-or ( i=0; i<8; i++)
-	{
-		for ( j=0; j<8; j++)
-			if (chessboard[i][j]==0)
+nt BlackChess=1, WhiteChess=2;
+int i, n, dirX, dirY, posX, posY;
+
+chessboard[row][column] = chessColor;
+
+for ( dirX=-1; dirX<2; dirX++)
+	for ( dirY=-1; dirY<2; dirY++)
+		if ( !( dirX==0 && dirY==0 ))
+		{
+			n=0;
+			posX = row + dirX;
+			posY = column + dirY;					
+			while (posX<8 && posX>-1 && posY<8 && posY>-1 && chessboard[posX][posY] == (BlackChess + WhiteChess - chessColor))
 			{
-				blackAvailable=0;
-				whiteAvailable=0;
-				for ( dirX=-1; dirX<2; dirX++)
-					for ( dirY=-1; dirY<2; dirY++)
-						if ( !( dirX==0 && dirY==0 ))
-								if ( (i+dirX)<8 && (i+dirX)>-1 && (j+dirY)<8 && (j+dirY)>-1 )
-								{
-									neighborColor = chessboard[i+dirX][j+dirY];
-									if (blackAvailable==0 && neighborColor == WhiteChess || whiteAvailable==0 && neighborColor == BlackChess)
-									{
-										posX = i + dirX;
-										posY = j + dirY;
-										edgeColor = neighborColor;
-										while ( edgeColor==neighborColor && posX>-1 && posX<8 && posY>-1 && posY<8)
-										{
-											posX += dirX;
-											posY += dirY;
-											edgeColor = chessboard[posX][posY];
-										}
-										if (edgeColor==(BlackChess + WhiteChess - neighborColor))
-										{
-											if (edgeColor==BlackChess)
-											{
-												blackAvaPos[numBPos][0]=i;
-												blackAvaPos[numBPos][1]=j;
-												numBPos++;
-												blackAvailable++;
-											}
-											else
-											{
-												whiteAvaPos[numWPos][0]=i;
-												whiteAvaPos[numWPos][1]=j;
-												numWPos++;
-												whiteAvailable++;
-											}
-										}
-									}
-								}
+				posX +=  dirX;
+				posY +=  dirY;
+				n++;
 			}
+			if (posX<8 && posX>-1 && posY<8 && posY>-1 &&  chessboard[posX][posY] ==chessColor)
+			{
+				posX = row + dirX;
+				posY = column + dirY;				
+				for (i=0; i<n; i++)
+				{
+					chessboard[posX][posY] = chessColor;
+					chessTurnPos[numPos][0]=posX;
+					chessTurnPos[numPos][1]=posY;
+					numPos++;
+					posX +=  dirX;
+					posY +=  dirY;
+				}
+			}
+		}
